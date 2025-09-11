@@ -12,11 +12,8 @@ function HeaderComponent() {
         <div className="links-container">
             <Link className='header-link' to='/'>Pedinos</Link>
             <Link className='header-link' to='/'>Catálogo</Link>
-            <Link className='header-link' to='/'>Preguntas Frecuentes</Link>
+            <Link className='header-link' to='/'>Q&A</Link>
             <Link className='header-link' to='/'>Contacto</Link>
-            <Link className='header-link' to='/'>
-                <i className="bi bi-cart3"></i>
-            </Link>
         </div>
     </header>
   )
