@@ -3,11 +3,19 @@
 header {
     width: 100dvw;
     height: 60px;
-    display: flex;
     background-color: var(--primary-color);
     position: fixed;
     top: 0;
     padding: 0 20px;
+    z-index: 100;
+}
+
+.header-container {
+    max-width: var(--main-content-max-width);
+    height: 100%;
+    margin: auto;
+    display: flex;
+    align-items: center;
 }
 
 .logo-container {
@@ -36,7 +44,7 @@ header {
 }
 
 .header-link {
-    padding: 0 5px;
+    padding: 0 15px;
     text-decoration: none;
     color: var(--light-color);
     font-weight: bold;

@@ -5,4 +5,7 @@
     --dark-color: #333;
     --bright-color: #eee9e9;
     --gray-color: #f0f0f0;
+
+    /* MEDIDAS */
+    --main-content-max-width: 1200px;
 }
