@@ -16,6 +16,9 @@ function HeaderComponent() {
                 <Link className='header-link' to='/'>Q&A</Link>
                 <Link className='header-link' to='/'>Contacto</Link>
             </div>
+            <div className="menu-container">
+                <i class="bi bi-list"></i>
+            </div>
         </div>
     </header>
   )
