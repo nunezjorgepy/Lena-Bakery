@@ -16,6 +16,7 @@ header {
     margin: auto;
     display: flex;
     align-items: center;
+    position: relative;
 }
 
 .logo-container {
@@ -48,9 +49,22 @@ header {
     text-decoration: none;
     color: var(--light-color);
     font-weight: bold;
-    position: relative;
     transition: all 0.3s ease;
 }
 .header-link:hover {
     color: var(--dark-color);
 }
+
+@media screen and (max-width: 800px) {
+    header {
+        height: 100px;
+        padding: 5px 0;
+    }
+    .header-container {
+        flex-direction: column;
+    }
+    .logo-container {
+        margin-right: 0;
+    }
+}
+
