@@ -6,4 +6,6 @@
 
 body {
   background-image: url('./assets/body-bg-image.jpg');
+  background-color: rgba(255, 255, 255, .6);
+  background-blend-mode: lighten;
 }

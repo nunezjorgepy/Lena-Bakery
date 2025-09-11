@@ -1,12 +1,15 @@
-import { useState } from 'react'
+import { Route, Routes } from 'react-router-dom'
 import './App.css'
+import BuyPage from './pages/BuyPage'
+import HomePage from './pages/HomePage'
 
 function App() {
 
   return (
-    <>
-      Hello Lena
-    </>
+    <Routes>
+      <Route path='/' element={<HomePage />} />
+      <Route path='/buy' element={<BuyPage />} />
+    </Routes>
   )
 }
 
