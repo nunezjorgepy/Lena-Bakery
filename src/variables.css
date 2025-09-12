@@ -8,10 +8,16 @@
     --order-bg-color: rgba(237, 223, 197, 0.8);
     --order-name-cg-color: rgb(236, 194, 152);
     --name-font-color: rgb(182, 111, 59);
+    --border-color: rgb(217, 214, 214);
+    --whatsapp-color: #25D366;
+    --whasapp-hover-color: #128C7E;
 
     /* MEDIDAS */
     --main-content-max-width: 1200px;
     --header-height: 60px;
     --header-height-800-screen: 100px;
     --header-height-500-screen: 80px;
+
+    /* TIEMPOS */
+    --transitions-time: 0.3s;
 }

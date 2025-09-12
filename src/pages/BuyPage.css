@@ -33,6 +33,117 @@
     gap: 20px;
 }
 
+/*
+===================
+Productos Agregados
+===================
+*/
+.items-added-container {
+    width: 100%;
+    background-color: white;
+    padding: 20px 15px 30px 15px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px gray;
+}
+.item-container {
+    display: flex;
+}
+
+.item-container {
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+/* Info del Producto */
+.product {
+    margin-right: auto;
+}
+.product-name {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.product-price {
+    color: var(--primary-color);
+    font-weight: bold;
+}
+/* Total del Producto */
+.total-product-container {
+    display: flex;
+    align-items: center;
+}
+.total-quantity {
+    margin-right: 2dvw;
+    color: var(--primary-color);
+    font-weight: bold;
+}
+.total-price {
+    margin-right: 1dvw;
+}
+.tras-icon {
+    background-color: transparent;
+    border: none;
+    border-radius: 3px;
+    background-color: rgb(226, 12, 12);
+    height: 25px;
+    width: 25px;
+    font-size: 1rem;
+    color: white;
+    transition: all var(--transitions-time) ease;
+}
+.tras-icon:hover {
+    background-color: rgb(192, 14, 14);
+    transform: scale(1.05);
+}
+
+/*
+===================
+Totales
+===================
+*/
+.total-container {
+    display: flex;
+    padding: 25px 0;
+    font-size: 1.1rem;
+}
+.total-h3 {
+    margin-right: auto;
+}
+.total-cart-price {
+    font-weight: bold;
+}
+
+/*
+===================
+WhatsApp
+===================
+*/
+.whatsapp-container {
+    display: flex;
+    justify-content: end;
+}
+.whatsapp {
+    background-color: var(--whatsapp-color);
+    color: var(--light-color);
+    border-radius: 30px;
+    width: 200px;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    transition: all var(--transitions-time) ease;
+}
+.whatsapp:hover {
+    background-color: var(--whasapp-hover-color);
+}
+.bi-whatsapp {
+    margin-right: 5px;
+}
+
+
+/*
+===================
+Media Queries
+===================
+*/
 @media screen and (max-width: 1200px) {
     .cards-containers {
         grid-template-columns: repeat(3, 1fr);
