@@ -3,7 +3,6 @@
 .buy-main {
     max-width: var(--main-content-max-width);
     margin: auto;
-    margin-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -13,6 +12,7 @@
 .buy-h2 {
     position: relative;
     font-size: 1.7rem;
+    margin: 20px 0;
 }
 
 .buy-h2::before {
@@ -24,4 +24,29 @@
     height: 3px;
     width: 150px;
     background-color: var(--primary-color);
+}
+
+.cards-containers {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+@media screen and (max-width: 1200px) {
+    .cards-containers {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .cards-containers {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .cards-containers {
+        grid-template-columns: 1fr;
+    }
 }

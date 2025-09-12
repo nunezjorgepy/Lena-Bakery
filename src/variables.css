@@ -5,6 +5,9 @@
     --dark-color: #333;
     --bright-color: #eee9e9;
     --gray-color: #f0f0f0;
+    --order-bg-color: rgba(237, 223, 197, 0.8);
+    --order-name-cg-color: rgb(236, 194, 152);
+    --name-font-color: rgb(182, 111, 59);
 
     /* MEDIDAS */
     --main-content-max-width: 1200px;

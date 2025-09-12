@@ -10,7 +10,10 @@ function BuyPage() {
         <main className="buy-main">
           <h2 className="buy-h2">Nuestros Productos</h2>
           <div className="cards-containers">
-            
+            <BuyProductCard />
+            <BuyProductCard />
+            <BuyProductCard />
+            <BuyProductCard />
           </div>
         </main>
     </div>
