@@ -1,3 +1,5 @@
+@import url('./variables.css');
+
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +9,21 @@
 
 body {
   background-image: url('./assets/body-bg-image.jpg');
-  background-color: rgba(255, 255, 255, .6);
+  background-color: rgba(255, 255, 255, .7);
   background-blend-mode: lighten;
+  padding-top: var(--header-height);
+}
+
+
+
+@media screen and (max-width: 800px) {
+  body {
+    padding-top: var(--header-height-800-screen);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  body {
+    padding-top: var(--header-height-500-screen);
+  }
 }

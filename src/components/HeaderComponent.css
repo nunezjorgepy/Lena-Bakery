@@ -65,7 +65,7 @@ header {
 
 @media screen and (max-width: 800px) {
     header {
-        height: 100px;
+        height: var(--header-height-800-screen);
         padding: 5px 0;
     }
     .header-container {
@@ -78,7 +78,7 @@ header {
 
 @media screen and (max-width: 500px) {
     header {
-        height: 80px;
+        height: var(--header-height-500-screen);
         padding-top: 15px;
     }
     .links-container {
@@ -104,6 +104,5 @@ header {
         top: 5px;
         right: 15px;
         font-size: 1.5rem;
-        color: rgb(19, 19, 19);
     }
 }
