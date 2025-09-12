@@ -1,3 +1,4 @@
+import BuyProductCard from "../components/BuyProductCard"
 import HeaderComponent from "../components/HeaderComponent"
 
 
