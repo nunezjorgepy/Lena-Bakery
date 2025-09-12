@@ -45,55 +45,7 @@ Productos Agregados
     border-radius: 10px;
     box-shadow: 0 5px 15px gray;
 }
-.item-container {
-    display: flex;
-}
 
-.item-container {
-    padding: 20px 0;
-    border-bottom: 1px solid var(--border-color);
-}
-
-/* Info del Producto */
-.product {
-    margin-right: auto;
-}
-.product-name {
-    font-weight: 500;
-    margin-bottom: 5px;
-}
-.product-price {
-    color: var(--primary-color);
-    font-weight: bold;
-}
-/* Total del Producto */
-.total-product-container {
-    display: flex;
-    align-items: center;
-}
-.total-quantity {
-    margin-right: 2dvw;
-    color: var(--primary-color);
-    font-weight: bold;
-}
-.total-price {
-    margin-right: 1dvw;
-}
-.tras-icon {
-    background-color: transparent;
-    border: none;
-    border-radius: 3px;
-    background-color: rgb(226, 12, 12);
-    height: 25px;
-    width: 25px;
-    font-size: 1rem;
-    color: white;
-    transition: all var(--transitions-time) ease;
-}
-.tras-icon:hover {
-    background-color: rgb(192, 14, 14);
-    transform: scale(1.05);
-}
 
 /*
 ===================

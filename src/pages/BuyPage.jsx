@@ -1,8 +1,9 @@
 import './BuyPage.css';
-import BuyProductCard from "../components/BuyProductCard"
-import HeaderComponent from "../components/HeaderComponent"
+import BuyProductCard from "../components/BuyProductCard";
+import HeaderComponent from "../components/HeaderComponent";
+import AddedProduct from '../components/AddedProduct';
 
-import products from '../constants/product-list'
+import products from '../constants/product-list';
 import { Link } from 'react-router-dom';
 
 
@@ -34,34 +35,9 @@ function BuyPage() {
             {/* Lista de agregados */}
             <div className="items-added-container">
               {/* Producto */}
-              <div className="item-container">
-                <div className="product">
-                  <div className="product-name">Medialena</div>
-                  <div className="product-price">$500 c/u</div>
-                </div>
-                <div className="total-product-container">
-                  <div className="total-quantity">3</div>
-                  <div className="total-price">$ 1500</div>
-                  <button className="tras-icon">
-                    <i className="bi bi-trash3"></i>
-                  </button>
-                </div>
-              </div>
-
-              {/* Producto */}
-              <div className="item-container">
-                <div className="product">
-                  <div className="product-name">Lemon Fit</div>
-                  <div className="product-price">$3000 c/u</div>
-                </div>
-                <div className="total-product-container">
-                  <div className="total-quantity">1</div>
-                  <div className="total-price">$ 3000</div>
-                  <button className="tras-icon">
-                    <i className="bi bi-trash3"></i>
-                  </button>
-                </div>
-              </div>
+              <AddedProduct />
+              <AddedProduct />
+              <AddedProduct />
 
               {/* Totales */}
               <div className="total-container">
