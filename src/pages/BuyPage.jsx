@@ -20,9 +20,12 @@ function BuyPage() {
           <HeaderComponent />
           <main className="buy-main">
             <h2 className="buy-h2">Nuestros Productos</h2>
+
             <div className="cards-containers">
               {HTMLProducts}
             </div>
+
+            <h2 className="buy-h2">Tu Pedido</h2>
           </main>
       </div>
     )

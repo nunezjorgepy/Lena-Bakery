@@ -18,6 +18,10 @@ button {
   cursor: pointer;
 }
 
+li {
+  list-style-type: none;
+}
+
 @media screen and (max-width: 800px) {
   body {
     padding-top: var(--header-height-800-screen);
