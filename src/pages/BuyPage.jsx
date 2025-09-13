@@ -8,7 +8,7 @@ import { ProductContext } from '../context/product.context';
 
 
 function BuyPage() {
-  const { HTMLProducts } = useContext(ProductContext);
+  const { HTMLProducts, HTMLAddedProducts } = useContext(ProductContext);
   
   return (
     <div className="max-container">
@@ -18,9 +18,9 @@ function BuyPage() {
           <h2 className="buy-h2">Nuestros Productos</h2>
 
           {/* Contenedor de productos */}
-          <div className="cards-containers">
+          <ul className="cards-containers">
             {HTMLProducts}
-          </div>
+          </ul>
 
           {/* Título */}
           <h2 className="buy-h2">Tu Pedido</h2>
@@ -28,9 +28,7 @@ function BuyPage() {
           {/* Lista de agregados */}
           <div className="items-added-container">
             {/* Producto */}
-            <AddedProduct />
-            <AddedProduct />
-            <AddedProduct />
+            {HTMLAddedProducts}
 
             {/* Totales */}
             <div className="total-container">

@@ -2,6 +2,7 @@ import { createContext } from "react";
 import { useState } from "react";
 import products from "../constants/product-list";
 import BuyProductCard from "../components/BuyProductCard";
+import AddedProduct from "../components/AddedProduct";
 
 const ProductContext = createContext();
 
@@ -15,6 +16,15 @@ function ProductProviderWrapper(props) {
         </li>
         )
     });
+
+    const HTMLAddedProducts = productList.filter((item) => item.quantity !== 0)
+            .map((product) => {
+                return (
+                    <li key={product.id}>
+                        <AddedProduct product={product}/>
+                    </li>
+                )
+            })
 
     const addQuantity = (id) => {
         /* Suma la cantidad de productos a comprar */
@@ -43,7 +53,7 @@ function ProductProviderWrapper(props) {
     }
     
     return (
-        <ProductContext.Provider value={{ productList, setProductList, addQuantity, substractQuantity, HTMLProducts }}>
+        <ProductContext.Provider value={{ productList, setProductList, addQuantity, substractQuantity, HTMLProducts, HTMLAddedProducts }}>
             {props.children}
         </ProductContext.Provider>
     )
