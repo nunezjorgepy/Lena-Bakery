@@ -1,4 +1,3 @@
-import productList from '../constants/product-list.js';
 import './BuyProductCard.css'
 
 function BuyProductCard(props) {
