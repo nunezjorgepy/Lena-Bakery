@@ -19,6 +19,7 @@ function ProductProviderWrapper(props) {
 
     const HTMLAddedProducts = productList.filter((item) => item.quantity !== 0)
             .map((product) => {
+                /* Filtra los elemntos, dejando fuera los que tengan quantty = 0. Después crea los componentes AddedProuct que se mostraán */
                 return (
                     <li key={product.id}>
                         <AddedProduct product={product}/>
@@ -51,9 +52,23 @@ function ProductProviderWrapper(props) {
 
         setProductList(newList);
     }
+
+    const deleteItem = (id) => {
+        /* Cambia el atributo quantity del producto seleccionado a 0, para que no se muestre en la página */
+        const newList = productList.map((item) => {
+            if (item.id !== id) {
+                return item
+            };
+
+            item.quantity = 0
+            return item;
+        })
+
+        setProductList(newList);
+    }
     
     return (
-        <ProductContext.Provider value={{ productList, setProductList, addQuantity, substractQuantity, HTMLProducts, HTMLAddedProducts }}>
+        <ProductContext.Provider value={{ productList, setProductList, addQuantity, substractQuantity, HTMLProducts, HTMLAddedProducts, deleteItem }}>
             {props.children}
         </ProductContext.Provider>
     )

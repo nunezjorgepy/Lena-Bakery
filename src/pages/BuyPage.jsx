@@ -28,7 +28,9 @@ function BuyPage() {
           {/* Lista de agregados */}
           <div className="items-added-container">
             {/* Producto */}
-            {HTMLAddedProducts}
+            <ul>
+              {HTMLAddedProducts}
+            </ul>
 
             {/* Totales */}
             <div className="total-container">
