@@ -1,11 +1,8 @@
 import './BuyPage.css';
-import BuyProductCard from "../components/BuyProductCard";
 import HeaderComponent from "../components/HeaderComponent";
 import AddedProduct from '../components/AddedProduct';
 
-import products from '../constants/product-list';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
 import { useContext } from 'react';
 import { ProductContext } from '../context/product.context';
 
