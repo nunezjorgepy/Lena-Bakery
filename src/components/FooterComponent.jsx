@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import './FooterComponent.css';
 
 function FooterComponent() {
-    const currentYear = new Date().getFullYear
+    const currentYear = new Date().getFullYear();
 
     return (
         <footer id='footer'>
@@ -59,7 +59,7 @@ function FooterComponent() {
                 </div>
             </div>
             <div className="footer-copyright">
-                @ 2025 Lena Bakery - Todos los derechos reservados
+                @ {currentYear} Lena Bakery - Todos los derechos reservados
             </div>
         </footer>
     )
