@@ -1,0 +1,98 @@
+@import url('../variables.css');
+
+#footer {
+    background-color: var(--dark-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    padding: 35px 0 20px 0;
+    overflow: hidden;
+}
+
+/*
+================
+GRID
+================
+*/
+.footer-grid {
+    max-width: var(--main-content-max-width);
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5dvw;
+    margin-bottom: 40px;
+}
+.footer-h3 {
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    margin: 15px 0;
+}
+.grid-column {
+    padding: 0 5%;
+}
+.footer-p {
+    margin: var(--footer-text-gap) 0;
+    line-height: 1.5rem;
+}
+.social {
+    margin-top: 15px;
+}
+.footer-link {
+    color: white;
+    font-size: 1.3rem;
+    margin: 0 10px;
+    transition: color 0.1s ease-in;
+}
+.footer-link:hover, .footer-enlaces:hover {
+    color: var(--primary-color);
+}
+
+/*
+================
+Links
+================
+*/
+.grid-column-links, .grid-column-conact {
+    display: flex;
+    flex-direction: column;
+}
+.footer-enlaces, .horarios, .footer-contact {
+    color: white;
+    margin: var(--footer-text-gap) 0;
+    transition: color .3s ease;
+}
+.horarios {
+    margin: 15px 0;
+}
+
+/*
+================
+Copy Right
+================
+*/
+.footer-copyright {
+    margin: 25px 0 5px 0;
+    position: relative;
+}
+.footer-copyright::before {
+    content: '';
+    position: absolute;
+    height: .1dvh;
+    width: 150dvw;
+    background-color: rgb(87, 77, 77);
+    top: -20px;
+    left: -50dvw;
+}
+
+@media screen and (max-width: 1000px) {
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+}

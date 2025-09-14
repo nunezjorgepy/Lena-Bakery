@@ -18,6 +18,7 @@
     --header-height-800-screen: 100px;
     --header-height-500-screen: 80px;
     --main-width-percentage: 90%;
+    --footer-text-gap: 8px;
 
     /* TIEMPOS */
     --transitions-time: 0.3s;

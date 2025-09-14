@@ -1,10 +1,10 @@
 import './BuyPage.css';
 import HeaderComponent from "../components/HeaderComponent";
-import AddedProduct from '../components/AddedProduct';
 
 import { Link } from 'react-router-dom';
 import { useContext, useRef } from 'react';
 import { ProductContext } from '../context/product.context';
+import FooterComponent from '../components/FooterComponent';
 
 
 function BuyPage() {
@@ -63,6 +63,8 @@ function BuyPage() {
             </div>
           </div>
         </main>
+
+        <FooterComponent />
     </div>
   )
 }
