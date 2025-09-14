@@ -31,9 +31,9 @@ function FooterComponent() {
                 <div className="grid-column grid-column-links">
                     <h3 className='footer-h3'>Enlaces Rápidos</h3>
                     <Link className="footer-enlaces" to={'/buy'} target='_blank'>Hacer Pedido</Link>
-                    <Link className="footer-enlaces" to={'/contact'} target='_blank'>Catálogo</Link>
-                    <Link className="footer-enlaces">Preguntas Frecuentes</Link>
-                    <Link className="footer-enlaces">Contacto</Link>
+                    <Link className="footer-enlaces" to={'/catalogo'} target='_blank'>Catálogo</Link>
+                    <Link className="footer-enlaces" to={'/faq'} target='_blank'>Preguntas Frecuentes</Link>
+                    <Link className="footer-enlaces" to={'/contact'} target='_blank'>Contacto</Link>
                 </div>
 
                 {/* Horarios de atención */}

@@ -1,3 +1,4 @@
+import FooterComponent from "../components/FooterComponent"
 import HeaderComponent from "../components/HeaderComponent"
 
 
@@ -6,6 +7,7 @@ function FAQPage() {
     <>
         <HeaderComponent />
         <div>FAQPage</div>
+        <FooterComponent />
     </>
   )
 }
