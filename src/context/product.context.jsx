@@ -7,7 +7,8 @@ import AddedProduct from "../components/AddedProduct";
 const ProductContext = createContext();
 
 function ProductProviderWrapper(props) {
-    const [productList, setProductList] = useState(products)
+    const [productList, setProductList] = useState(products);
+    const [message, setMessage] = useState('')
 
     const HTMLProducts = productList.map((product) => {
         return (
@@ -38,6 +39,7 @@ function ProductProviderWrapper(props) {
         })
 
         setProductList(newList);
+        HTMLMessage();
     }
 
     const substractQuantity = (id) => {
@@ -74,9 +76,17 @@ function ProductProviderWrapper(props) {
       minimumFractionDigits: 2, // Mínimo de dígitos decimales
       maximumFractionDigits: 2  // Máximo de dígitos decimales
     });
+
+    const HTMLMessage = () => {
+      /* Genera el mensaje que se enviará por WatsApp. */
+        let msg = '';
+        productList.filter(item => item.quantity !== 0)
+                    .map(item => msg += ` - *${item.quantity} ${item.name}*`);
+        setMessage(msg)
+    }
     
     return (
-        <ProductContext.Provider value={{ productList, setProductList, addQuantity, substractQuantity, HTMLProducts, HTMLAddedProducts, deleteItem, HTMLTotal }}>
+        <ProductContext.Provider value={{ productList, setProductList, addQuantity, substractQuantity, HTMLProducts, HTMLAddedProducts, deleteItem, HTMLTotal, message }}>
             {props.children}
         </ProductContext.Provider>
     )

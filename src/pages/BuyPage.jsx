@@ -8,7 +8,7 @@ import { ProductContext } from '../context/product.context';
 
 
 function BuyPage() {
-  const { HTMLProducts, HTMLAddedProducts, HTMLTotal } = useContext(ProductContext);
+  const { HTMLProducts, HTMLAddedProducts, HTMLTotal, message } = useContext(ProductContext);
   
   return (
     <div className="max-container">
@@ -40,7 +40,7 @@ function BuyPage() {
 
             {/* Totales */}
             <div className="whatsapp-container">
-              <Link to={'https://wa.me/541136661035?text=Hello'} target='_blank' className="whatsapp">
+              <Link to={`https://wa.me/541136661035?text=¡Hola! ¿Cómo estas? Te quería pedir ${message} - ¡Muchas gracias!`} target='_blank' className="whatsapp">
                 <i className="bi bi-whatsapp"></i>
                 Envíanos tu pedido
               </Link>
