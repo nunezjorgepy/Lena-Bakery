@@ -27,7 +27,7 @@
 }
 
 .cards-containers {
-    width: 90%;
+    width: var(--main-width-percentage);
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
@@ -39,7 +39,7 @@ Productos Agregados
 ===================
 */
 .items-added-container {
-    width: 100%;
+    width: var(--main-width-percentage);
     background-color: white;
     padding: 20px 15px 30px 15px;
     border-radius: 10px;

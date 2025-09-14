@@ -17,6 +17,7 @@
     --header-height: 60px;
     --header-height-800-screen: 100px;
     --header-height-500-screen: 80px;
+    --main-width-percentage: 90%;
 
     /* TIEMPOS */
     --transitions-time: 0.3s;

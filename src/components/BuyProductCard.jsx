@@ -20,7 +20,6 @@ function BuyProductCard(props) {
                         <div className="order-quantity">{producto.quantity}</div>
                         <button className="quantity-btn plus-btn" onClick={() => changeQuantity('plus', producto.id)}>+</button>
                     </div>
-                    <button className="add-btn">Agregar</button>
                 </div>
             </div>
         </article>

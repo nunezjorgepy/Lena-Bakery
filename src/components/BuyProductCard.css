@@ -44,7 +44,7 @@ Info Styles
     color: var(--name-font-color);
     font-size: 1.2rem;
     font-weight: bold;
-    width: 90%;
+    width: var(--main-width-percentage);
     height: 25px;
 }
 
@@ -68,7 +68,7 @@ Buttons Styles
 .quantity-btns {
     display: flex;
     align-items: center;
-    margin-right: auto;
+    margin: auto;
     height: 50%;
 }
 .quantity-btn {
@@ -83,18 +83,8 @@ Buttons Styles
     justify-content: center;
 }
 .minus-btn {
-    margin-right: 10px;
+    margin-right: 30px;
 }
 .plus-btn {
-    margin-left: 10px;
-}
-.add-btn {
-    background-color: var(--primary-color);
-    width: 80px;
-    height: 30px;
-    line-height: 30px;
-    border-radius: 5px;
-    text-align: center;
-    color: white;
-    border: none;
+    margin-left: 30px;
 }
