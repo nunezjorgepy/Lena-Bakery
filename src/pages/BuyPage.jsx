@@ -8,7 +8,7 @@ import { ProductContext } from '../context/product.context';
 
 
 function BuyPage() {
-  const { HTMLProducts, HTMLAddedProducts } = useContext(ProductContext);
+  const { HTMLProducts, HTMLAddedProducts, HTMLTotal } = useContext(ProductContext);
   
   return (
     <div className="max-container">
@@ -35,7 +35,7 @@ function BuyPage() {
             {/* Totales */}
             <div className="total-container">
               <h3 className="total-h3">Total: </h3>
-              <div className="total-cart-price">$ 4500</div>
+              <div className="total-cart-price">{HTMLTotal}</div>
             </div>
 
             {/* Totales */}

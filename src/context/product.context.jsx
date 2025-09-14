@@ -66,9 +66,17 @@ function ProductProviderWrapper(props) {
 
         setProductList(newList);
     }
+
+    const HTMLTotal = productList.reduce((total, item) => total + item.price * item.quantity, 0)
+                    .toLocaleString('es-AR', {
+      style: 'currency',
+      currency: 'ARS',
+      minimumFractionDigits: 2, // Mínimo de dígitos decimales
+      maximumFractionDigits: 2  // Máximo de dígitos decimales
+    });
     
     return (
-        <ProductContext.Provider value={{ productList, setProductList, addQuantity, substractQuantity, HTMLProducts, HTMLAddedProducts, deleteItem }}>
+        <ProductContext.Provider value={{ productList, setProductList, addQuantity, substractQuantity, HTMLProducts, HTMLAddedProducts, deleteItem, HTMLTotal }}>
             {props.children}
         </ProductContext.Provider>
     )

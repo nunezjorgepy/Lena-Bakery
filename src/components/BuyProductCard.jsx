@@ -13,7 +13,7 @@ function BuyProductCard(props) {
             </div>
             <div className="order-info">
                 <div className="order-name">{producto.name}</div>
-                <div className="order-price">${producto.price}</div>
+                <div className="order-price">$ {producto.price}</div>
                 <div className="add-to-cart">
                     <div className="quantity-btns">
                         <button className="quantity-btn minus-btn" onClick={() => substractQuantity(producto.id)}>-</button>
