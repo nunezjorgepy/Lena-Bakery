@@ -4,7 +4,7 @@ import { ProductContext } from '../context/product.context';
 
 function AddedProduct(props) {
   const producto = props.product;
-  const { deleteItem } = useContext(ProductContext);
+  const { changeQuantity } = useContext(ProductContext);
 
   return (
     <div className="item-container">
@@ -15,7 +15,7 @@ function AddedProduct(props) {
         <div className="total-product-container">
             <div className="total-quantity">{producto.quantity}</div>
             <div className="total-price">$ {producto.price * producto.quantity}</div>
-            <button className="tras-icon" onClick={() => deleteItem(producto.id)}>
+            <button className="tras-icon" onClick={() => changeQuantity('zero', producto.id)}>
             <i className="bi bi-trash3"></i>
             </button>
         </div>
