@@ -14,6 +14,10 @@ function BuyPage() {
     <div className="max-container">
         <HeaderComponent />
         <main className="buy-main">
+          <div className="get-to-order-continaer">
+            <span className='get-to-span buy-h2'>Tu pedido</span>
+            <button className="get-to-btn"><i className="bi bi-arrow-down"></i></button>
+          </div>
           {/* Título */}
           <h2 className="buy-h2">Nuestros Productos</h2>
 

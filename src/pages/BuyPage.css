@@ -7,6 +7,7 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative;
 }
 
 .buy-h2 {
@@ -88,6 +89,44 @@ WhatsApp
 }
 .bi-whatsapp {
     margin-right: 5px;
+}
+
+/*
+===================
+'Get to' Button
+===================
+*/
+.get-to-order-continaer {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    right: 2dvw;
+    top: 2dvh;
+    z-index: 100;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: var(--light-color);
+    border: 2px solid var(--primary-color);
+}
+.get-to-span {
+    font-size: 1rem;
+    padding: 0;
+    margin-top: 0;
+}
+.get-to-btn {
+    width: 50px;
+    height: 50px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    box-shadow: 1px 1px 1px rgb(128, 128, 128);
+    background-color: white;
+    color: var(--primary-color);
+    font-size: 1.3rem;
+    transition: all var(--transitions-time) ease;
+}
+.get-to-btn:hover {
+    transform: translateY(7px) scale(1.1);
 }
 
 
