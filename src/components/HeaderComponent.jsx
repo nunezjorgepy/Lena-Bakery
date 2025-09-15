@@ -20,8 +20,8 @@ function HeaderComponent() {
                 <div className="links-container" ref={linksRef}>
                     <Link className='header-link' to='/buy'>Pedinos</Link>
                     <Link className='header-link' to='/catalogo'>Catálogo</Link>
-                    <Link className='header-link' to='/'>Q&A</Link>
-                    <Link className='header-link' to='/'>Contacto</Link>
+                    <Link className='header-link' to='/faq'>Q&A</Link>
+                    <Link className='header-link' to='/contact'>Contacto</Link>
                 </div>
                 <button className="menu-container" onClick={() => showMenu()}>
                     <i className="bi bi-list"></i>

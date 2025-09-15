@@ -22,6 +22,7 @@
     --main-width-percentage: 90%;
     --footer-text-gap: 8px;
     --extra-info-height: 25px;
+    --faq-btn-width: 23px;  /* It's also it's height and line-height */
 
     /* TIEMPOS */
     --transitions-time: 0.3s;

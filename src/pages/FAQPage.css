@@ -1,0 +1,50 @@
+@import url('../variables.css');
+
+.faq-container {
+    max-width:var(--main-content-max-width);
+    width: 70%;
+    padding: 10px;
+    background-color: var(--order-bg-color);
+    border-radius: 10px;
+}
+.question-container {
+    border: 2px solid var(--primary-color);
+    border-radius: 5px;
+    overflow: hidden;
+    color: var(--light-color);
+}
+.question {
+    background-color: var(--primary-color);
+    padding: 5px 10px;
+    text-transform: uppercase;
+    display: flex;
+}
+.faq-question {
+    margin-right: auto;
+}
+.faq-btn {
+    border: none;
+    height: var(--faq-btn-width);
+    width: var(--faq-btn-width);
+    line-height: var(--faq-btn-width);
+    border-radius: 5px;
+    background-color: var(--order-bg-color);
+    color: var(--primary-color);
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+.respuesta {
+    background-color: var(--light-color);
+    color: var(--primary-color);
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-align: justify;
+    height: 0;
+    transition: all .2s ease-out;
+}
+
+.show-answer {
+    height: auto;
+    padding: 5px 10px;
+}
