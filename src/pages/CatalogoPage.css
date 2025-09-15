@@ -8,3 +8,17 @@
     gap: 40px;
     row-gap: 40px;
 }
+
+@media screen and (max-width: 1200px) {
+    .product-grid-container {
+        width: 95%;
+        column-gap: 15px;
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .product-grid-container {
+        grid-template-columns: 1fr;
+    }
+}

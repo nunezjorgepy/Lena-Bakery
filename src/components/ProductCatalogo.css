@@ -36,23 +36,26 @@ Información
     display: flex;
     gap: 10px;
 }
-.product-image-name {
-    display: flex;
-}
 .product-image {
     width: 40%;
+    border-radius: 10px;
+}
+
+/*
+==================
+Description
+==================
+*/
+.description {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .catalogo-h3 {
     font-size: .85rem;
     text-align: center;
     margin-bottom: 9px;
 }
-
-/*
-==================
-Ingredientes
-==================
-*/
 .product-ingredientes {
     font-size: .8rem;
     text-align: center;
@@ -81,4 +84,22 @@ Infor Extra
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+/*
+==================
+Media Query
+==================
+*/
+
+@media screen and (max-width: 900px) {
+    .catalogo-h3 {
+        font-size: calc(.4dvw + .9rem);
+    }
+    .product-ingredientes {
+        font-size: calc(.2dvw + .9rem);
+    }
+    .product-extra-info {
+        font-size: 3dvw;
+    }
 }
