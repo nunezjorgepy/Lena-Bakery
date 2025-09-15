@@ -19,7 +19,7 @@ function HeaderComponent() {
                 </div>
                 <div className="links-container" ref={linksRef}>
                     <Link className='header-link' to='/buy'>Pedinos</Link>
-                    <Link className='header-link' to='/'>Catálogo</Link>
+                    <Link className='header-link' to='/catalogo'>Catálogo</Link>
                     <Link className='header-link' to='/'>Q&A</Link>
                     <Link className='header-link' to='/'>Contacto</Link>
                 </div>

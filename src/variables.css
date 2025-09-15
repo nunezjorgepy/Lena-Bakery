@@ -11,6 +11,8 @@
     --border-color: rgb(217, 214, 214);
     --whatsapp-color: #25D366;
     --whasapp-hover-color: #128C7E;
+    --name--font-color: rgb(182, 111, 59);
+    --description-bg-color: rgb(239, 201, 162);
 
     /* MEDIDAS */
     --main-content-max-width: 1200px;
@@ -19,6 +21,7 @@
     --header-height-500-screen: 80px;
     --main-width-percentage: 90%;
     --footer-text-gap: 8px;
+    --extra-info-height: 25px;
 
     /* TIEMPOS */
     --transitions-time: 0.3s;
