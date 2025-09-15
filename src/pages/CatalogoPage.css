@@ -2,93 +2,9 @@
 
 .product-grid-container {
     margin: 30px 0;
-    width: 90%;
+    width: 100%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
-}
-
-.product {
-    color: var(--name--font-color);
-    background-color: var(--description-bg-color);
-    padding: 8px 8px;
-    padding-bottom: 25px;
-    border-radius: 15px;
-    position: relative;
-    transition: all .3s ease;
-}
-.product:hover {
-    z-index: 10;
-    transform: scale(1.2);
-}
-
-/*
-==================
-Nombre
-==================
-*/
-.catalogo-h2 {
-    width: 60%;
-    font-size: 1.2rem;
-    color: white;
-    padding: 5px 10px;
-    margin-bottom: 7px;
-    background-color: var(--name--font-color);
-    border-radius: 15px;
-}
-
-/*
-==================
-Información
-==================
-*/
-.product-info {
-    display: flex;
-    gap: 10px;
-}
-.product-image-name {
-    display: flex;
-}
-.product-image {
-    width: 40%;
-}
-.catalogo-h3 {
-    font-size: .85rem;
-    text-align: center;
-    margin-bottom: 9px;
-}
-
-/*
-==================
-Ingredientes
-==================
-*/
-.product-ingredientes {
-    font-size: .8rem;
-    text-align: center;
-}
-.product-span {
-    font-weight: bold;
-}
-
-/*
-==================
-Infor Extra
-==================
-*/
-.product-extra-info {
-    position: absolute;
-    width: 90%;
-    text-align: center;
-    height: var(--extra-info-height);
-    border-radius: calc(var(--extra-info-height) / 2);
-    bottom: -5px;
-    left: 50%;
-    transform: translateX(-50%);
-    background-color: var(--name--font-color);
-    color: white;
-    font-size: .8rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    gap: 40px;
+    row-gap: 40px;
 }
