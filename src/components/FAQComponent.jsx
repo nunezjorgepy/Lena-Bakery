@@ -1,24 +1,25 @@
 import { useRef } from "react";
 
-function FAQComponent() {
+function FAQComponent(props) {
     const faqBtn = useRef(null);
+    const { question, answer } = props.faq;
 
     const changeBtnText = () => {
         let faqSymbol = faqBtn.current;
         faqSymbol.innerHTML = faqSymbol.innerHTML === '+' ? '-' : '+';
     }
     return (
-        <div className="faq-container">
+        <>
             <div className="question-container">
             <div className="question">
-                <div className="faq-question">¿Cómo conservar tus productos?</div>
+                <div className="faq-question">{question}</div>
                 <button className="faq-btn" ref={faqBtn} onClick={() => changeBtnText()}>+</button>
             </div>
             <div className="respuesta">
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora vel natus, fugiat accusamus consectetur explicabo veritatis ullam pariatur fugit assumenda cupiditate fuga omnis aspernatur perspiciatis reiciendis nostrum nisi sunt? Facilis!
+                {answer}
             </div>
             </div>
-        </div>
+        </>
     )
 }
 
