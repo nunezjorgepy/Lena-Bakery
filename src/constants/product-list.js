@@ -14,6 +14,7 @@ const products = [
         price: 800,
         description: "INTEGRALES. SIN MANTECA Y SIN AZÚCAR AGREGADA",
         ingredients: "harina integral, harina de avena, manzana, pasta de maní, huevos, leche descremada, dátiles stevia.",
+        extra: 'PODES ELEGIRLAS RELLENAS CON DULCE DE LECHE SIN AZÚCAR',
         quantity: 0,
     },
     {
@@ -24,6 +25,7 @@ const products = [
         description: "Pan de molde con Semillas Tostadas",
         ingredients: `harina integral, levadura, aceite de oliva, semillas, sal. 
         Ideal para tud tostadas con palta o huevo`,
+        extra: '',
         quantity: 0,
     },
     {
@@ -33,6 +35,7 @@ const products = [
         price: 2500,
         description: "INTEGRALES Y SIN MANTECA :)",
         ingredients: "harina integral, papa, boniato, garbanzos, aceite de oliva, sal, pimentón, queso parmesano.",
+        extra: 'LOS BIZCOCHITOS VIENEN EN BOLSITAS DE 100G',
         quantity: 0,
     },
     {
@@ -42,6 +45,7 @@ const products = [
         price: 3500,
         description: "Cuadraditos de coco o dulce de leche",
         ingredients: "harina integral, harina de avena, coco rallado, dulce de leche sin azúcar, dátiles, stevia, huevos, vainilla, nueces.",
+        extra: 'VIENEN EN PACK DE 130G',
         quantity: 0,
     },
     {
@@ -51,6 +55,7 @@ const products = [
         price: 4500,
         description: "SIN MANTECA NI SIN AZÚCAR AGREGADA",
         ingredients: "Queso crema light, yogur natural, huevos, harina de avena, vainilla, leche en polvo, cacao amargo, stevia, café.",
+        extra: 'ES UN POSTRE SUPER RICO Y SALUDABLE',
         quantity: 0,
     },
     {
@@ -60,6 +65,7 @@ const products = [
         price: 4300,
         description: "Lemon Pie fit hiper proteico",
         ingredients: "Huevos, yogur natural, jugo de li,ón, queso crema light, coco rallado, harina de avena, semillas de sesamo, stevia.",
+        extra: '24G DE PROTE, UN POSTRE QUE BANCA LOS ENTRENOS',
         quantity: 0,
     },
     {
@@ -69,6 +75,7 @@ const products = [
         price: 4000,
         description: "Pastafrola integral sin azúcar",
         ingredients: "No esta dentro de las historías, pero ya lo voy a atener.",
+        extra: '',
         quantity: 0,
     },
 ];

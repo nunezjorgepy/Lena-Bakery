@@ -1,37 +1,38 @@
-import products from "../constants/product-list";
 import './ProductCatalogo.css';
 
-function ProductCatalogo() {
-  return (
-    <>
-        {/* Producto */}
-        <div className="product">
-            {/* Nombre */}
-            <h2 className="catalogo-h2">{products[0].name}</h2>
-            
-            <div className="product-info-container">
-            <div className="product-info">
+function ProductCatalogo(props) {
+    const { name, image, description, ingredients, extra} = props.product
 
-                {/* Información */}
-                {/* Imagen */}
-                <img className="product-image" src={products[0].image} alt="Imagen del producto" />
+    return (
+        <>
+            {/* Producto */}
+            <div className="product">
+                {/* Nombre */}
+                <h2 className="catalogo-h2">{name}</h2>
+                
+                <div className="product-info-container">
+                <div className="product-info">
 
-                <div className="description">
-                {/* Descripción */}
-                <h3 className="catalogo-h3">{products[0].description}</h3>
+                    {/* Información */}
+                    {/* Imagen */}
+                    <img className="product-image" src={image} alt="Imagen del producto" />
 
-                {/* Ingredientes */}
-                <p className="product-ingredientes">
-                    <span className="product-span">Ingredientes: </span>{products[0].ingredients}
-                </p>
+                    <div className="description">
+                        {/* Descripción */}
+                        <h3 className="catalogo-h3">{description}</h3>
+
+                        {/* Ingredientes */}
+                        <p className="product-ingredientes">
+                            <span className="product-span">Ingredientes: </span>{ingredients}
+                        </p>
+                    </div>
                 </div>
+                </div>
+                {/* Info Extra */}
+                {extra && <div className="product-extra-info">{extra}</div>}
             </div>
-            </div>
-            {/* Info Extra */}
-            <div className="product-extra-info">Podes elegirlas rellenas con dulce de leche sin azúcar</div>
-        </div>
-    </>
-  )
+        </>
+    )
 }
 
 export default ProductCatalogo

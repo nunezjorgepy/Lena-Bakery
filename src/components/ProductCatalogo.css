@@ -34,7 +34,7 @@ Información
 */
 .product-info {
     display: flex;
-    gap: 10px;
+    gap: 15px;
 }
 .product-image {
     width: 40%;
@@ -50,15 +50,14 @@ Description
     display: flex;
     flex-direction: column;
     justify-content: center;
+    text-align: center;
+    gap: 15px;
 }
 .catalogo-h3 {
     font-size: .85rem;
-    text-align: center;
-    margin-bottom: 9px;
 }
 .product-ingredientes {
     font-size: .8rem;
-    text-align: center;
 }
 .product-span {
     font-weight: bold;
@@ -80,7 +79,7 @@ Infor Extra
     transform: translateX(-50%);
     background-color: var(--name--font-color);
     color: white;
-    font-size: .8rem;
+    font-size: .7rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -100,6 +99,6 @@ Media Query
         font-size: calc(.2dvw + .9rem);
     }
     .product-extra-info {
-        font-size: 3dvw;
+        font-size: calc(2dvw + .15em);
     }
 }

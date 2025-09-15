@@ -9,7 +9,7 @@
 
 body {
   background-image: url('./assets/body-bg-image.jpg');
-  background-color: rgba(255, 255, 255, .7);
+  background-color: rgba(255, 255, 255, .75);
   background-blend-mode: lighten;
   padding-top: var(--header-height);
 }
