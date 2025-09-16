@@ -51,3 +51,9 @@
 .show-answer {
     height: auto;
 }
+
+@media screen and (max-width: 900px) {
+    .faq-container {
+        width: 90%;
+    }
+}
