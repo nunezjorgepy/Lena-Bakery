@@ -8,7 +8,7 @@ function AddedProduct(props) {
 
   return (
     <div className="item-container">
-        <div className="product">
+        <div className="product-added">
             <div className="product-name">{producto.name}</div>
             <div className="product-price">${producto.price} c/u</div>
         </div>
