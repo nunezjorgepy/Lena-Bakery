@@ -42,10 +42,12 @@
     font-weight: 600;
     text-align: justify;
     height: 0;
-    transition: all .2s ease-out;
+    transition: all 2s ease;
+}
+.answer-p {
+    padding: 5px 10px;
 }
 
 .show-answer {
     height: auto;
-    padding: 5px 10px;
 }
