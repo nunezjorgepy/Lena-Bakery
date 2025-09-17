@@ -2,6 +2,7 @@ import './HeaderComponent.css';
 import smallLogo from '../assets/small-logo.png'
 import { Link } from 'react-router-dom';
 import { useRef } from 'react';
+import companyData from '../constants/companyData.js';
 
 function HeaderComponent() {
     const linksRef = useRef(null);
@@ -15,7 +16,7 @@ function HeaderComponent() {
             <div className="header-container">
                 <div className="logo-container">
                     <img className='header-logo' src={smallLogo} alt="Lena Bakery Logo" />
-                    <div className="header-company-name">Lena Bakery</div>
+                    <div className="header-company-name">{companyData.name}</div>
                 </div>
                 <div className="links-container" ref={linksRef}>
                     <Link className='header-link' to='/buy'>Pedinos</Link>

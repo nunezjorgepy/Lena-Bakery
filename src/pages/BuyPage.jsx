@@ -1,10 +1,11 @@
 import './BuyPage.css';
 import HeaderComponent from "../components/HeaderComponent";
+import FooterComponent from '../components/FooterComponent';
+import companyData from '../constants/companyData.js';
 
 import { Link } from 'react-router-dom';
 import { useContext, useRef } from 'react';
 import { ProductContext } from '../context/product.context';
-import FooterComponent from '../components/FooterComponent';
 
 
 function BuyPage() {
@@ -56,7 +57,7 @@ function BuyPage() {
 
             {/* Totales */}
             <div className="whatsapp-container">
-              <Link to={`https://wa.me/541136661035?text=¡Hola! ¿Cómo estas? Te quería pedir ${message} - ¡Muchas gracias!`} target='_blank' className="whatsapp">
+              <Link to={`https://wa.me/54${companyData.phone}?text=¡Hola! ¿Cómo estas? Te quería pedir ${message} - ¡Muchas gracias!`} target='_blank' className="whatsapp">
                 <i className="bi bi-whatsapp"></i>
                 Envíanos tu pedido
               </Link>

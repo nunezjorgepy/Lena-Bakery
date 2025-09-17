@@ -1,8 +1,9 @@
 import { Link } from 'react-router-dom';
 import './FooterComponent.css';
+import companyData from '../constants/companyData.js';
 
 function FooterComponent() {
-    const currentYear = new Date().getFullYear();
+    const currentYear = new Date().getFullYear();    
 
     return (
         <footer id='footer'>
@@ -10,12 +11,12 @@ function FooterComponent() {
 
                 {/* Description and social */}
                 <div className="grid-column">
-                    <h3 className='footer-h3'>Lena Bakery</h3>
+                    <h3 className='footer-h3'>{companyData.name}</h3>
                     <p className="footer-p">
                         Elaborando los mejores productos de panadería desde 2024 con ingredientes de primera calidad y recetas tradicionales.
                     </p>
                     <div className="social">
-                        <Link className='footer-link' to={'https://www.instagram.com/lenabkry/'} target='_blank'>
+                        <Link className='footer-link' to={companyData.ig} target='_blank'>
                             <i className="bi bi-instagram"></i>
                         </Link>
                         <Link className='footer-link' to={'#'} target='_blank'>
@@ -30,10 +31,10 @@ function FooterComponent() {
                 {/* Enlaces Rápidos */}
                 <div className="grid-column grid-column-links">
                     <h3 className='footer-h3'>Enlaces Rápidos</h3>
-                    <Link className="footer-enlaces" to={'/buy'} target='_blank'>Hacer Pedido</Link>
+                    <Link className="footer-enlaces" to={'/buy'}>Hacer Pedido</Link>
                     <Link className="footer-enlaces" to={'/catalogo'} target='_blank'>Catálogo</Link>
-                    <Link className="footer-enlaces" to={'/faq'} target='_blank'>Preguntas Frecuentes</Link>
-                    <Link className="footer-enlaces" to={'/contact'} target='_blank'>Contacto</Link>
+                    <Link className="footer-enlaces" to={'/faq'}>Preguntas Frecuentes</Link>
+                    <Link className="footer-enlaces" to={'/contact'}>Contacto</Link>
                 </div>
 
                 {/* Horarios de atención */}
@@ -51,10 +52,10 @@ function FooterComponent() {
                         <i className="bi bi-geo-alt"></i> Av. SiempreVivas 732
                     </div>
                     <div className="footer-whatsapp footer-contact">
-                        <i className="bi bi-whatsapp"></i> +54 011 3666 1035
+                        <i className="bi bi-whatsapp"></i> +54 0{companyData.phone.substring(0,2)} {companyData.phone.substring(2,6)} {companyData.phone.substring(6,10)}
                     </div>
                     <div className="footer-mail footer-contact">
-                        <i className="bi bi-envelope"></i> info@lenabakery.com.ar
+                        <i className="bi bi-envelope"></i> {companyData.mail}
                     </div>
                 </div>
             </div>
