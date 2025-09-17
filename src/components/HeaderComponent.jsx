@@ -14,10 +14,10 @@ function HeaderComponent() {
     return (
         <header>
             <div className="header-container">
-                <div className="logo-container">
+                <Link to={'/'} className="logo-container">
                     <img className='header-logo' src={smallLogo} alt="Lena Bakery Logo" />
                     <div className="header-company-name">{companyData.name}</div>
-                </div>
+                </Link>
                 <div className="links-container" ref={linksRef}>
                     <Link className='header-link' to='/buy'>Pedinos</Link>
                     <Link className='header-link' to='/catalogo'>Catálogo</Link>
