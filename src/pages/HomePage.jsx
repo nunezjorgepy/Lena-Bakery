@@ -21,6 +21,13 @@ function HomePage() {
 
             <Emojis emoji='bread' text='No somos sólo una panadería. Tenemos un propósito.'/>
 
+            <div className='whoweare-container'>
+                <div className="heart-container">
+                    <div className="heart-shape"></div>
+                </div>
+                    <p className="heart-text one">Elaboramos productos con igredientes que <strong>nutern: sin ultraprocesados, sin azúcares ni harinas refinadas.</strong></p>
+            </div>
+
             <Emojis emoji='hearts' text='Panadería y postres sin azúcares refinadas.'/>
 
             <Emojis emoji='stars' text='Revisiono tus recetas favoritas para que puedas disfrutarlas.'/>

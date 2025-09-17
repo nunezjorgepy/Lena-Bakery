@@ -104,7 +104,7 @@ WhatsApp
     align-items: center;
     right: 2dvw;
     top: 12dvh;
-    z-index: 100;
+    z-index: 10;
     padding: 10px;
     border-radius: 5px;
     background-color: var(--light-color);

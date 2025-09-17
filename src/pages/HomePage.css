@@ -64,12 +64,73 @@ Emojis
 }
 
 /*
+========================================================
+                Who We Are
+========================================================
+                                                    */
+.whoweare-container {
+    position: relative;
+    background-color: var(--primary-color);
+    width: 99dvw;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+/*
+==============
+Heart Shape
+==============
+*/
+.heart-shape {
+    background-color: var(--light-color);
+    height: var(--heart-width);
+    width: var(--heart-width);
+    position: absolute;
+    left: 50%;
+    top: 100px;
+    transform: translateX(-50%) rotate(45deg);
+}
+.heart-shape::before,
+.heart-shape::after {
+    content: '';
+    width: var(--heart-width);
+    height: var(--heart-width);
+    border-radius: 50%;
+    background-color: var(--light-color);
+    position: absolute;
+    top: 0;
+}
+.heart-shape::before {
+    transform: translateY(-50%);
+}
+.heart-shape::after {
+    transform: translateX(-50%);
+}
+
+/*
+==============
+Heart Text
+==============
+*/
+.heart-text {
+    max-width: 25ch;
+    line-height: 35px;
+    text-align: center;
+    font-size: 1.3rem;
+    z-index: 10;
+    position: absolute;
+    top: 52%;
+    transform: translateY(-70%);
+}
+
+/*
 ==============
 Media Queries
 ==============
 */
 @media screen and (max-width: 1200px) {
-    .bg-emojis {
+    .bg-emojis, .whoweare-container {
         width: 100dvw;
     }
 }
@@ -79,6 +140,15 @@ Media Queries
     }
     .welcome-img {
         width: 65%;
+    }
+    .heart-shape, .heart-shape::after, .heart-shape::before {
+        height: var(--heart-width-small);
+        width: var(--heart-width-small);
+    }
+    .heart-text {
+        font-size: 1rem;
+        line-height: 30px;
+        top: 45%;
     }
 }
 

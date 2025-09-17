@@ -24,6 +24,10 @@
     --extra-info-height: 25px;
     --faq-btn-width: 23px;  /* It's also it's height and line-height */
 
+    /* Medidas para la fomra del corazón de la página principal */
+    --heart-width: 220px;
+    --heart-width-small: 150px;
+
     /* TIEMPOS */
     --transitions-time: 0.3s;
 }
