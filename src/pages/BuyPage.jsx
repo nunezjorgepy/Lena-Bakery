@@ -57,7 +57,7 @@ function BuyPage() {
 
             {/* Totales */}
             <div className="whatsapp-container">
-              <Link to={`https://wa.me/54${companyData.phone}?text=¡Hola! ¿Cómo estas? Te quería pedir ${message} - ¡Muchas gracias!`} target='_blank' className="whatsapp">
+              <Link to={`https://wa.me/54${companyData.phone}?text=¡Hola! ¿Cómo estas? Te quería pedir: ${message} %0D%0A¡Muchas gracias!`} target='_blank' className="whatsapp">
                 <i className="bi bi-whatsapp"></i>
                 Envíanos tu pedido
               </Link>

@@ -80,7 +80,7 @@ function ProductProviderWrapper(props) {
       /* Genera el mensaje que se enviará por WatsApp. */
         let msg = '';
         productList.filter(item => item.quantity !== 0)
-                    .map(item => msg += ` - *${item.quantity} ${item.name}*`);
+                    .map(item => msg += ` %0D%0A- *${item.quantity} ${item.name}*`);
         setMessage(msg)
     }
     

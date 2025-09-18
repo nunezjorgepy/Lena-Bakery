@@ -6,6 +6,7 @@
     padding: 0 10px;
     background-color: var(--order-bg-color);
     border-radius: 10px;
+    margin-bottom: 40px;
 }
 .question-container {
     border: 2px solid var(--primary-color);

@@ -15,7 +15,7 @@ function ProductCatalogo(props) {
 
                     {/* Información */}
                     {/* Imagen */}
-                    <img className="product-image" src={image} alt="Imagen del producto" />
+                    <img className="product-image" src={image} alt={description} />
 
                     <div className="description">
                         {/* Descripción */}

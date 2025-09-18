@@ -3,6 +3,7 @@ import HeaderComponent from "../components/HeaderComponent";
 import './HomePage.css';
 import welcomeLena from '../assets/welcome-lena.png'
 import Emojis from "../components/Emojis";
+import bizcochito from '../assets/bizcochitos.png';
 
 
 function HomePage() {

@@ -27,10 +27,12 @@ H2 and Image
     text-shadow: 2px 2px 1px black;
     font-size: 3.2rem;
     padding: 25px;
+    z-index: 10;
 }
 .welcome-img {
     width: min(300px, 90%);
     padding: 25px 0;
+    z-index: 10;
 }
 
 /*
