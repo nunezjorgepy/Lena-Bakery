@@ -14,19 +14,19 @@ function HomePage() {
         {/* <div className="cien-dvw-bg-color"></div> */}
         <main className="buy-main">
             {/* Título e imagen de bienvenida */}
-            <div className="welcome-title">
+            <section className="welcome-title">
                 <h1 className='welcome-h2'>Bienvenidos a</h1>
                 <img className="welcome-img" src={welcomeLena} alt="Logo de Lena Bakery" />
-            </div>
+            </section>
 
             <Emojis emoji='bread' text='No somos sólo una panadería. Tenemos un propósito.'/>
 
-            <div className='whoweare-container'>
+            <section className='whoweare-container'>
                 <div className="heart-container">
                     <div className="heart-shape"></div>
                 </div>
                     <p className="heart-text one">Elaboramos productos con igredientes que <strong>nutern: sin ultraprocesados, sin azúcares ni harinas refinadas.</strong></p>
-            </div>
+            </section>
 
             <Emojis emoji='hearts' text='Panadería y postres sin azúcares refinadas.'/>
 
