@@ -1,0 +1,16 @@
+/* 
+IMPORTANTE: Esto es MUY provisorio. Antes de empezar, tengo que intentar definir todas las variables posibles 
+Además, intentar usar OKLCH para facilitar los cambios de colores
+*/
+
+/* 
+    Definición de variables CSS para el proyecto
+*/
+
+:root {
+    --primary-color: rgb(235, 142, 46); /* Este color no es necesario en oklch */
+    --secondary-color: rgb(255, 255, 255);
+    --accent-color: rgb(255, 255, 255);
+    --text-color: #2d3748;
+    --bg-color: #faf5f5;
+}

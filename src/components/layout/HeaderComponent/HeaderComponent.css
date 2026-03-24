@@ -1,0 +1,18 @@
+/* Provisorio. Sólo para trabajar en la conexión con el backend. Más adelante, mejorar los estilos */
+
+header {
+    background-color: var(--primary-color);
+    padding: 1rem;
+    color: var(--secondary-color);
+}
+
+.header-link-list {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+}
+
+.header-link {
+    text-decoration: none;
+    color: var(--secondary-color);
+}
