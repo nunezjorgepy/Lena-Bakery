@@ -13,4 +13,9 @@ Además, intentar usar OKLCH para facilitar los cambios de colores
     --accent-color: rgb(255, 255, 255);
     --text-color: #2d3748;
     --bg-color: #faf5f5;
+
+    /* Measures */
+    --max-width: 1200px;
+    --header-height: 60px;
+    --footer-height: 60px;
 }
