@@ -1,5 +1,6 @@
 import { Link } from 'react-router'
 import './InformationFormComponent.css'
+import ButtonComponent from '../ButtonComponent/ButtonComponent'
 
 /* 
     El formulario tendrá un título, un subtítulo y los campos para ingresar la información.
@@ -214,7 +215,10 @@ function InformationFormComponent() {
 
             {/* Footer del formulario */}
             <div className='form-footer'>
-                <button type="submit">Registrarse</button>
+                <ButtonComponent
+                    text="Registrarse"
+                    type="submit"
+                />
                 <p>¿Ya tenés una cuenta? <Link to="/login" className='form-footer-link'>Iniciá sesión</Link></p>
             </div>
         </div>

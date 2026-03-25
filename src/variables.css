@@ -38,19 +38,10 @@ Además, intentar usar OKLCH para facilitar los cambios de colores
     --black-800: rgba(0, 0, 0, 0.8);
     --black-900: rgba(0, 0, 0, 0.9);
 
-    /* Warning colors */
+    /* Warning, error and success colors */
     --warning-color: rgb(216, 5, 5);
-    --warning-color-05: oklch(from var(--warning-color) l c h / 0.05);
-    --warning-color-10: oklch(from var(--warning-color) l c h / 0.1);
-    --warning-color-20: oklch(from var(--warning-color) l c h / 0.2);
-    --warning-color-30: oklch(from var(--warning-color) l c h / 0.3);
-    --warning-color-40: oklch(from var(--warning-color) l c h / 0.4);
-    --warning-color-50: oklch(from var(--warning-color) l c h / 0.5);
-    --warning-color-60: oklch(from var(--warning-color) l c h / 0.6);
-    --warning-color-70: oklch(from var(--warning-color) l c h / 0.7);
-    --warning-color-80: oklch(from var(--warning-color) l c h / 0.8);
-    --warning-color-90: oklch(from var(--warning-color) l c h / 0.9);
-    --warning-color-100: oklch(from var(--warning-color) l c h / 1);
+    --error-color: rgb(216, 5, 5);
+    --success-color: rgb(5, 216, 5);
 
     /* Measures */
     --max-width: 1200px;

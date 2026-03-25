@@ -1,8 +1,16 @@
 import './ButtonComponent.css'
 
-function ButtonComponent() {
+function ButtonComponent(props) {
+    const { text, onClick, disabled, type } = props
     return (
-        <button>ButtonComponent</button>
+        <button 
+            className={`primary-btn ${props.className}`}
+            onClick={onClick} 
+            disabled={disabled} 
+            type={type}
+        >
+            {text}
+        </button>
     )
 }
 
