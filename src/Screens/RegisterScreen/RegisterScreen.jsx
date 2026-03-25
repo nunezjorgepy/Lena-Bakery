@@ -9,7 +9,9 @@ function RegisterScreen() {
     <>
       <HeaderComponent />
       <main>
-        <InformationFormComponent />
+        <section className='register-section'>
+          <InformationFormComponent />
+        </section>
       </main>
     </>
   )
