@@ -88,7 +88,7 @@ function InformationFormComponent() {
                             />
                         </div>
                         {/* Segunda fila: confirmar contraseña */}
-                        <div className="form-section-group flex-33">
+                        <div className="form-section-group flex-50">
                             <label htmlFor="password" className='required'>Contraseña</label>
                             <input 
                                 type="password" 
@@ -97,7 +97,7 @@ function InformationFormComponent() {
                                 placeholder='Ingresa tu contraseña' 
                             />
                         </div>
-                        <div className="form-section-group flex-33">
+                        <div className="form-section-group flex-50">
                             <label htmlFor="confirm-password" className='required'>Confirmar contraseña</label>
                             <input 
                                 type="password" 
