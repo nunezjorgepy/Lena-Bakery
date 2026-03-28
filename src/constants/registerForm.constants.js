@@ -183,3 +183,21 @@ export const REGISTER_FORM_CONSTANTS = {
         link_text: "Iniciá sesión"
     }
 }
+
+export const initialFormState = {
+    [REGISTER_FORM_CONSTANTS.sections[0].inputs[0].name]: "",
+    [REGISTER_FORM_CONSTANTS.sections[0].inputs[1].name]: "",
+    [REGISTER_FORM_CONSTANTS.sections[0].inputs[2].name]: "",
+    [REGISTER_FORM_CONSTANTS.sections[0].inputs[3].name]: "",
+    [REGISTER_FORM_CONSTANTS.sections[1].inputs[0].name]: "",
+    [REGISTER_FORM_CONSTANTS.sections[1].inputs[1].name]: "",
+    [REGISTER_FORM_CONSTANTS.sections[1].inputs[2].name]: "",
+    [REGISTER_FORM_CONSTANTS.sections[2].inputs[0].name]: "",
+    [REGISTER_FORM_CONSTANTS.sections[2].inputs[1].name]: "",
+    [REGISTER_FORM_CONSTANTS.sections[2].inputs[2].name]: "",
+    [REGISTER_FORM_CONSTANTS.sections[2].inputs[3].name]: "",
+    [REGISTER_FORM_CONSTANTS.sections[2].inputs[4].name]: "",
+    [REGISTER_FORM_CONSTANTS.sections[2].inputs[5].name]: "",
+    [REGISTER_FORM_CONSTANTS.sections[2].inputs[6].name]: "",
+    [REGISTER_FORM_CONSTANTS.sections[2].inputs[7].name]: ""
+}

@@ -5,12 +5,20 @@ import HeaderComponent from '../../components/layout/HeaderComponent/HeaderCompo
 import InformationFormComponent from '../../components/ui/InformationFormComponent/InformationFormComponent'
 
 // Constants
-import { REGISTER_FORM_CONSTANTS } from '../../constants/registerForm.constants'
+import { REGISTER_FORM_CONSTANTS, initialFormState } from '../../constants/registerForm.constants'
 import ButtonComponent from '../../components/ui/ButtonComponent/ButtonComponent'
 import { Link } from 'react-router'
 
 function RegisterScreen() {
-  const { form_title, form_subtitle, sections, button, footer } = REGISTER_FORM_CONSTANTS
+  const { 
+    form_title, 
+    form_subtitle, 
+    sections, 
+    button, 
+    footer 
+  } = REGISTER_FORM_CONSTANTS
+  
+  
   return (
     <>
       <HeaderComponent />
@@ -22,6 +30,7 @@ function RegisterScreen() {
             sections={sections}
             button={button}
             footer={footer}
+            initialFormState={initialFormState}
           />
         </section>
       </main>

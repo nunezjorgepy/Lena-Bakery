@@ -1,6 +1,7 @@
 import { Link } from 'react-router'
 import './InformationFormComponent.css'
 import ButtonComponent from '../ButtonComponent/ButtonComponent'
+import useForm from '../../../hooks/useForm'
 
 /* 
     El formulario tendrá un título, un subtítulo y los campos para ingresar la información.
@@ -10,17 +11,23 @@ import ButtonComponent from '../ButtonComponent/ButtonComponent'
 */
 
 function InformationFormComponent(props) {
-    const { form_title, form_subtitle, sections, button, footer } = props
-    
-    const submitForm = (e) => {
-        e.preventDefault()
-        console.log('Form submitted')
+    const { form_title, form_subtitle, sections, button, footer, initialFormState } = props
+        
+    const onRegister = () => {
+        console.log(formState)
     }
+
+    const { 
+        handleChangeInput, 
+        onSubmit, 
+        formState, 
+        resetForm 
+    } = useForm({ initialFormState, submitFn: onRegister })
 
     // Renderizar las secciones
     const renderSections = () => {
         return sections.map((section, index) => (
-            <div key={index} className="form-section" onSubmit={submitForm}>
+            <div key={index} className="form-section">
                 <div className="form-section-header">
                     <span>{section.section_number}</span>
                     <h2>{section.section_title}</h2>
@@ -35,7 +42,9 @@ function InformationFormComponent(props) {
                                 type={input.type} 
                                 id={input.id} 
                                 name={input.name} 
-                                placeholder={input.placeholder} 
+                                placeholder={input.placeholder}
+                                onChange={handleChangeInput}
+                                value={formState[input.name]}
                             />
                         </div>
                     ))}
@@ -44,8 +53,14 @@ function InformationFormComponent(props) {
         ))
     }
 
+    /* 
+        TODO: agregar un useEffect que redirija a:
+            - /login si el usuario ya está logueado
+            - / si se completó el registro exitosamente
+    */
+
     return (
-        <form className='form-container' onSubmit={submitForm}>
+        <form className='form-container' onSubmit={onSubmit}>
             {/* Header del formulario */}
             <div className='form-header'>
                 <h1>{form_title}</h1>
