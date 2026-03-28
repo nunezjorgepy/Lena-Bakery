@@ -3,4 +3,4 @@ const ENVIRONMENT = {
     
 }
 
-export default ENVIRONMENT_CONFIG;
+export default ENVIRONMENT;
