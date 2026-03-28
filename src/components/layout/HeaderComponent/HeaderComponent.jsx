@@ -16,7 +16,7 @@ function HeaderComponent() {
                         <Link to="/place-order">Place Order</Link>
                     </li>
                     <li className='header-link'>
-                        <Link to="/log-in">Log In</Link>
+                        <Link to="/login">Log In</Link>
                     </li>
                     <li className='header-link'>
                         <Link to="/register">Register</Link>

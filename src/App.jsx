@@ -15,7 +15,7 @@ function App() {
         <Route path="/" element={<HomePageScreen />} />
         <Route path="/our-products" element={<OurProductsScreen />} />
         <Route path="/place-order" element={<PlaceOrderScreen />} />
-        <Route path="/log-in" element={<LogInScreen />} />
+        <Route path="/login" element={<LogInScreen />} />
         <Route path="/register" element={<RegisterScreen />} />
 
         {/* Admin Routes */}

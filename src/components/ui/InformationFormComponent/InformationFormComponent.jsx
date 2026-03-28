@@ -10,7 +10,7 @@ import ButtonComponent from '../ButtonComponent/ButtonComponent'
 */
 
 function InformationFormComponent(props) {
-    const { form_title, form_subtitle, sections } = props
+    const { form_title, form_subtitle, sections, button, footer } = props
     
     const submitForm = (e) => {
         e.preventDefault()
@@ -60,10 +60,15 @@ function InformationFormComponent(props) {
             {/* Footer del formulario */}
             <div className='form-footer'>
                 <ButtonComponent
-                    text="Registrarse"
-                    type="submit"
+                    text={button.text}
+                    type={button.type}
                 />
-                <p>¿Ya tenés una cuenta? <Link to="/login" className='form-footer-link'>Iniciá sesión</Link></p>
+                <p>
+                    {footer.text} 
+                    <Link to={footer.link} className='form-footer-link'>
+                        {footer.link_text}
+                    </Link>
+                </p>
             </div>
         </form>
     )

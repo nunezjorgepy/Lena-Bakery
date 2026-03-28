@@ -10,7 +10,7 @@ import ButtonComponent from '../../components/ui/ButtonComponent/ButtonComponent
 import { Link } from 'react-router'
 
 function RegisterScreen() {
-  const { form_title, form_subtitle, sections } = REGISTER_FORM_CONSTANTS
+  const { form_title, form_subtitle, sections, button, footer } = REGISTER_FORM_CONSTANTS
   return (
     <>
       <HeaderComponent />
@@ -20,6 +20,8 @@ function RegisterScreen() {
             form_title={form_title}
             form_subtitle={form_subtitle}
             sections={sections}
+            button={button}
+            footer={footer}
           />
         </section>
       </main>

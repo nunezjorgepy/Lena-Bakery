@@ -172,5 +172,14 @@ export const REGISTER_FORM_CONSTANTS = {
                 }
             ]
         }
-    ]
+    ],
+    button: {
+        text: "Registrarse",
+        type: "submit"
+    },
+    footer: {
+        text: "¿Ya tenés una cuenta?",
+        link: "/login",
+        link_text: "Iniciá sesión"
+    }
 }
