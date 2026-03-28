@@ -9,195 +9,53 @@ import ButtonComponent from '../ButtonComponent/ButtonComponent'
     El botón de enviar va en la sección form-footer.
 */
 
-function InformationFormComponent() {
+function InformationFormComponent(props) {
+    const { form_title, form_subtitle, sections } = props
+    
+    const submitForm = (e) => {
+        e.preventDefault()
+        console.log('Form submitted')
+    }
+
+    // Renderizar las secciones
+    const renderSections = () => {
+        return sections.map((section, index) => (
+            <div key={index} className="form-section" onSubmit={submitForm}>
+                <div className="form-section-header">
+                    <span>{section.section_number}</span>
+                    <h2>{section.section_title}</h2>
+                </div>
+                <div className="form-section-flex-container">
+                    {section.inputs.map((input, index) => (
+                        <div key={index} className={`form-section-group ${input.flex}`}>
+                            <label htmlFor={input.id} className={input.required ? 'required' : ''}>
+                                {input.label}
+                            </label>
+                            <input 
+                                type={input.type} 
+                                id={input.id} 
+                                name={input.name} 
+                                placeholder={input.placeholder} 
+                            />
+                        </div>
+                    ))}
+                </div>
+            </div>
+        ))
+    }
+
     return (
-        <div className='form-container'>
+        <form className='form-container' onSubmit={submitForm}>
             {/* Header del formulario */}
             <div className='form-header'>
-                <h1>Crea una cuenta</h1>
-                <span>Ingresa tus datos para crear una cuenta y realizar pedidos</span>
+                <h1>{form_title}</h1>
+                <span>{form_subtitle}</span>
             </div>
 
             {/* Body del formulario */}
-            {/* Primera sección: Información personal */}
             <div className='form-body'>
-                <div className="form-section">
-                    <div className="form-section-header">
-                        <span>1</span>
-                        <h2>Información personal</h2>
-                    </div>
-
-                    {/* Grupos de inputs */}
-                    <div className="form-section-flex-container">
-                        {/* Primera fila: Nombre y Apellido */}
-                        <div className="form-section-group flex-50">
-                            <label htmlFor="name" className='required'>Nombre</label>
-                            <input 
-                                type="text" 
-                                id="name" 
-                                name="name" 
-                                placeholder='Ingresa tu nombre' 
-                            />
-                        </div>
-                        <div className="form-section-group flex-50">
-                            <label htmlFor="lastname" className='required'>Apellido</label>
-                            <input 
-                                type="text" 
-                                id="lastname" 
-                                name="lastname" 
-                                placeholder='Ingresa tu apellido' 
-                            />
-                        </div>
-                        {/* Segunda fila: teléfono y fecha de nacimiento */}
-                        <div className="form-section-group flex-50">
-                            <label htmlFor="phone" className='required'>Teléfono</label>
-                            <input 
-                                type="text" 
-                                id="phone" 
-                                name="phone" 
-                                placeholder='Ingresa tu teléfono' 
-                            />
-                        </div>
-                        <div className="form-section-group flex-50">
-                            <label htmlFor="birthdate" className='required'>Fecha de nacimiento</label>
-                            <input 
-                                type="text" 
-                                id="birthdate" 
-                                name="birthdate" 
-                                placeholder='Ingresa tu fecha de nacimiento' 
-                            />
-                        </div>
-                    </div>
-                </div>
-
-                {/* Segunda sección: Detalles de la cuenta */}
-                <div className="form-section">
-                    <div className="form-section-header">
-                        <span>2</span>
-                        <h2>Detalles de la cuenta</h2>
-                    </div>
-                    <div className="form-section-flex-container">
-                        {/* Primera fila: email y contraseña */}
-                        <div className="form-section-group flex-100">
-                            <label htmlFor="email" className='required'>Email</label>
-                            <input 
-                                type="text" 
-                                id="email" 
-                                name="email" 
-                                placeholder='Ingresa tu email' 
-                            />
-                        </div>
-                        {/* Segunda fila: confirmar contraseña */}
-                        <div className="form-section-group flex-50">
-                            <label htmlFor="password" className='required'>Contraseña</label>
-                            <input 
-                                type="password" 
-                                id="password" 
-                                name="password" 
-                                placeholder='Ingresa tu contraseña' 
-                            />
-                        </div>
-                        <div className="form-section-group flex-50">
-                            <label htmlFor="confirm-password" className='required'>Confirmar contraseña</label>
-                            <input 
-                                type="password" 
-                                id="confirm-password" 
-                                name="confirm-password" 
-                                placeholder='Confirma tu contraseña' 
-                            />
-                        </div>
-                    </div>
-                </div>
-
-                {/* Tercera sección: Dirección */}
-                <div className="form-section">
-                    <div className="form-section-header">
-                        <span>3</span>
-                        <h2>Dirección</h2>
-                    </div>
-                    <div className="form-section-flex-container">
-                        {/* Primera fila: Calle y altura */}
-                        <div className="form-section-group flex-50">
-                            <label htmlFor="street" className='required'>Calle</label>
-                            <input 
-                                type="text" 
-                                id="street" 
-                                name="street" 
-                                placeholder='Ingresa tu calle' 
-                            />
-                        </div>
-                        <div className="form-section-group flex-50">
-                            <label htmlFor="height" className='required'>Altura</label>
-                            <input 
-                                type="text" 
-                                id="height" 
-                                name="height" 
-                                placeholder='Ingresa tu altura' 
-                            />
-                        </div>
-                        {/* Segunda fila: Piso y Departamento */}
-                        <div className="form-section-group flex-50">
-                            <label htmlFor="floor">Piso</label>
-                            <input 
-                                type="text" 
-                                id="floor" 
-                                name="floor" 
-                                placeholder='Ingresa tu piso' 
-                            />
-                        </div>
-                        <div className="form-section-group flex-50">
-                            <label htmlFor="apartment">Departamento</label>
-                            <input 
-                                type="text" 
-                                id="apartment" 
-                                name="apartment" 
-                                placeholder='Ingresa tu departamento' 
-                            />
-                        </div>
-                        {/* Tercera fila: ciudad y código postal */}
-                        <div className="form-section-group flex-50">
-                            <label htmlFor="city" className='required'>Localidad</label>
-                            <input 
-                                type="text" 
-                                id="city" 
-                                name="city" 
-                                placeholder='Ingresa tu localidad' 
-                            />
-                        </div>
-                        <div className="form-section-group flex-50">
-                            <label htmlFor="postal-code" className='required'>Código postal</label>
-                            <input 
-                                type="text" 
-                                id="postal-code" 
-                                name="postal-code" 
-                                placeholder='Ingresa tu código postal' 
-                            />
-                        </div>
-                        {/* Cuarta fila: Provincia y País */}
-                        <div className="form-section-group flex-50">
-                            <label htmlFor="province" className='required'>Provincia</label>
-                            <input 
-                                type="text" 
-                                id="province" 
-                                name="province" 
-                                placeholder='Ingresa tu provincia' 
-                            />
-                        </div>
-                        <div className="form-section-group flex-50">
-                            <label htmlFor="country" className='required'>País</label>
-                            <input 
-                                type="text" 
-                                id="country" 
-                                name="country" 
-                                placeholder='Ingresa tu país' 
-                            />
-                        </div>
-                    </div>
-                </div>
+                {renderSections()}
             </div>
-
-
-
 
             {/* Footer del formulario */}
             <div className='form-footer'>
@@ -207,7 +65,7 @@ function InformationFormComponent() {
                 />
                 <p>¿Ya tenés una cuenta? <Link to="/login" className='form-footer-link'>Iniciá sesión</Link></p>
             </div>
-        </div>
+        </form>
     )
 }
 
