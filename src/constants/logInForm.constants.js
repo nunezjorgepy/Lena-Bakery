@@ -39,13 +39,13 @@ export const LOG_IN_FORM_CONSTANTS = {
     },
     footer: {
         text: "¿No tenés una cuenta?",
-        link_text: "Registrate",
-        link_to: "/register"
+        link: "/register",
+        link_text: "Registrate"
     }
 }
 
 // initialFormState
 export const initialFormState = {
-    [LOG_IN_FORM_CONSTANTS.inputs[0].name]: "",
-    [LOG_IN_FORM_CONSTANTS.inputs[1].name]: ""
+    [LOG_IN_FORM_CONSTANTS.sections[0].inputs[0].name]: "",
+    [LOG_IN_FORM_CONSTANTS.sections[0].inputs[1].name]: ""
 }

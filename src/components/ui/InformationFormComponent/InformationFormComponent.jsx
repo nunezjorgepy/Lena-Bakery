@@ -32,10 +32,12 @@ function InformationFormComponent(props) {
     const renderSections = () => {
         return sections.map((section, index) => (
             <div key={index} className="form-section">
-                <div className="form-section-header">
-                    <span>{section.section_number}</span>
-                    <h2>{section.section_title}</h2>
-                </div>
+                {section.section_number && section.section_title &&
+                    <div className="form-section-header">
+                        <span>{section.section_number}</span>
+                        <h2>{section.section_title}</h2>
+                    </div>
+                }
                 <div className="form-section-flex-container">
                     {section.inputs.map((input, index) => (
                         <div key={index} className={`form-section-group ${input.flex}`}>
