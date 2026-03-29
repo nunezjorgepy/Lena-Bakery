@@ -2,6 +2,8 @@ import { Link } from 'react-router'
 import './InformationFormComponent.css'
 import ButtonComponent from '../ButtonComponent/ButtonComponent'
 import useForm from '../../../hooks/useForm'
+import useRequest from '../../../hooks/useRequest'
+import authService from '../../../services/authService'
 
 /* 
     El formulario tendrá un título, un subtítulo y los campos para ingresar la información.
@@ -12,9 +14,19 @@ import useForm from '../../../hooks/useForm'
 
 function InformationFormComponent(props) {
     const { form_title, form_subtitle, sections, button, footer, initialFormState } = props
+    const {sendRequest, response, error, loading} = useRequest()
         
+    // TODO: esta función debe pasarse como prop
     const onRegister = () => {
-        console.log(formState)
+        try {
+            sendRequest({
+                requestCb: () => {
+                    return authService.register(formState)
+                }
+            })
+        } catch (error) {
+            console.log(error)
+        }
     }
 
     const { 

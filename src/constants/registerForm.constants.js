@@ -19,8 +19,8 @@ export const REGISTER_FORM_CONSTANTS = {
                     required: true
                 },
                 {
-                    id: "lastname",
-                    name: "lastname",
+                    id: "lastName",
+                    name: "lastName",
                     label: "Apellido",
                     placeholder: "Ingresa tu apellido",
                     required: true,
@@ -39,12 +39,12 @@ export const REGISTER_FORM_CONSTANTS = {
                     required: true
                 },
                 {
-                    id: "birthdate",
-                    name: "birthdate",
+                    id: "birthDate",
+                    name: "birthDate",
                     label: "Fecha de nacimiento",
                     placeholder: "Ingresa tu fecha de nacimiento",
                     required: true,
-                    type: "text",
+                    type: "date",
                     flex: "flex-50",
                     required: true
                 }
@@ -75,8 +75,8 @@ export const REGISTER_FORM_CONSTANTS = {
                     required: true
                 },
                 {
-                    id: "confirm-password",
-                    name: "confirm-password",
+                    id: "confirmPassword",
+                    name: "confirmPassword",
                     label: "Confirmar contraseña",
                     placeholder: "Confirma tu contraseña",
                     required: true,
@@ -121,8 +121,8 @@ export const REGISTER_FORM_CONSTANTS = {
                     required: false
                 },
                 {
-                    id: "apartment",
-                    name: "apartment",
+                    id: "department",
+                    name: "department",
                     label: "Departamento",
                     placeholder: "Ingresa tu departamento",
                     required: false,
@@ -141,8 +141,8 @@ export const REGISTER_FORM_CONSTANTS = {
                     required: true
                 },
                 {
-                    id: "zip",
-                    name: "zip",
+                    id: "zipCode",
+                    name: "zipCode",
                     label: "Código postal",
                     placeholder: "Ingresa tu código postal",
                     required: true,
@@ -151,8 +151,8 @@ export const REGISTER_FORM_CONSTANTS = {
                     required: true
                 },
                 {
-                    id: "state",
-                    name: "state",
+                    id: "province",
+                    name: "province",
                     label: "Provincia",
                     placeholder: "Ingresa tu provincia",
                     required: true,

@@ -17,7 +17,21 @@ function RegisterScreen() {
     button, 
     footer 
   } = REGISTER_FORM_CONSTANTS
+
+  const onRegister = () => {
+        try {
+            sendRequest({
+                requestCb: () => {
+                    return authService.register(formState)
+                }
+            })
+        } catch (error) {
+            console.log(error)
+        }
+    }
   
+  // TODO: la función onRegister debería escribirse acá y pasarse como parámetro, pero no puedo hacerlo. 
+  // No sé si es por el hook useForm o por el hook useRequest.
   
   return (
     <>
@@ -31,6 +45,7 @@ function RegisterScreen() {
             button={button}
             footer={footer}
             initialFormState={initialFormState}
+            onSubmitFuntion
           />
         </section>
       </main>

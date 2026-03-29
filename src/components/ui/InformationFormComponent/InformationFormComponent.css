@@ -1,7 +1,7 @@
 .form-container{
     width: min(100%, 800px);
     padding: 2rem;
-    border-radius: 1rem;
+    border-radius: .5rem;
     background-color: var(--secondary-color);
     box-shadow: var(--box-shadow-1);
 }
