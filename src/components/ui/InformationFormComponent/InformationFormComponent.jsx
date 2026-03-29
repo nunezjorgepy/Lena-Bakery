@@ -2,8 +2,6 @@ import { Link } from 'react-router'
 import './InformationFormComponent.css'
 import ButtonComponent from '../ButtonComponent/ButtonComponent'
 import useForm from '../../../hooks/useForm'
-import useRequest from '../../../hooks/useRequest'
-import authService from '../../../services/authService'
 
 /* 
     El formulario tendrá un título, un subtítulo y los campos para ingresar la información.
@@ -13,28 +11,22 @@ import authService from '../../../services/authService'
 */
 
 function InformationFormComponent(props) {
-    const { form_title, form_subtitle, sections, button, footer, initialFormState } = props
-    const {sendRequest, response, error, loading} = useRequest()
-        
-    // TODO: esta función debe pasarse como prop
-    const onRegister = () => {
-        try {
-            sendRequest({
-                requestCb: () => {
-                    return authService.register(formState)
-                }
-            })
-        } catch (error) {
-            console.log(error)
-        }
-    }
+    const { 
+        form_title, 
+        form_subtitle, 
+        sections, 
+        button, 
+        footer, 
+        initialFormState, 
+        onSubmitFunction 
+    } = props
 
     const { 
         handleChangeInput, 
         onSubmit, 
         formState, 
         resetForm 
-    } = useForm({ initialFormState, submitFn: onRegister })
+    } = useForm({ initialFormState, submitFn: onSubmitFunction })
 
     // Renderizar las secciones
     const renderSections = () => {
@@ -73,10 +65,10 @@ function InformationFormComponent(props) {
 
     return (
         <form className='form-container' onSubmit={onSubmit}>
-            {/* Header del formulario */}
+            {/* Header del formulario (si existe) */}
             <div className='form-header'>
-                <h1>{form_title}</h1>
-                <span>{form_subtitle}</span>
+                <h1>{form_title && form_title}</h1>
+                <span>{form_subtitle && form_subtitle}</span>
             </div>
 
             {/* Body del formulario */}
@@ -86,16 +78,21 @@ function InformationFormComponent(props) {
 
             {/* Footer del formulario */}
             <div className='form-footer'>
-                <ButtonComponent
+                {button.text && <ButtonComponent
                     text={button.text}
                     type={button.type}
-                />
-                <p>
-                    {footer.text} 
-                    <Link to={footer.link} className='form-footer-link'>
-                        {footer.link_text}
-                    </Link>
-                </p>
+                />}
+                {
+                    footer &&
+                    <p>
+                        {footer.text} {' '}
+                        {footer.link && footer.link_text && 
+                            <Link to={footer.link} className='form-footer-link'>
+                                {footer.link_text}
+                            </Link>
+                        }
+                    </p>
+                }
             </div>
         </form>
     )

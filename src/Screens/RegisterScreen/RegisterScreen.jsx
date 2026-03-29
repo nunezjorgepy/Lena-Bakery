@@ -8,6 +8,8 @@ import InformationFormComponent from '../../components/ui/InformationFormCompone
 import { REGISTER_FORM_CONSTANTS, initialFormState } from '../../constants/registerForm.constants'
 import ButtonComponent from '../../components/ui/ButtonComponent/ButtonComponent'
 import { Link } from 'react-router'
+import useRequest from '../../hooks/useRequest'
+import authService from '../../services/authService'
 
 function RegisterScreen() {
   const { 
@@ -18,21 +20,20 @@ function RegisterScreen() {
     footer 
   } = REGISTER_FORM_CONSTANTS
 
-  const onRegister = () => {
-        try {
-            sendRequest({
-                requestCb: () => {
-                    return authService.register(formState)
-                }
-            })
-        } catch (error) {
-            console.log(error)
+  const { sendRequest, response, error, loading } = useRequest()
+
+  const onRegister = (formState) => {
+    try {
+      sendRequest({
+        requestCb: () => {
+          return authService.register(formState)
         }
+      })
+    } catch (error) {
+      console.log(error)
     }
-  
-  // TODO: la función onRegister debería escribirse acá y pasarse como parámetro, pero no puedo hacerlo. 
-  // No sé si es por el hook useForm o por el hook useRequest.
-  
+  }
+
   return (
     <>
       <HeaderComponent />
@@ -45,7 +46,7 @@ function RegisterScreen() {
             button={button}
             footer={footer}
             initialFormState={initialFormState}
-            onSubmitFuntion
+            onSubmitFunction={onRegister}
           />
         </section>
       </main>
