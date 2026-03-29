@@ -1,17 +1,20 @@
 import './LogInScreen.css'
 import HeaderComponent from '../../components/layout/HeaderComponent/HeaderComponent'
-import { LOG_IN_FORM_CONSTANTS, initialFormState } from '../../constants/logInForm.constants'
 import InformationFormComponent from '../../components/ui/InformationFormComponent/InformationFormComponent'
-import useRequest from '../../hooks/useRequest'
+import { LOG_IN_FORM_CONSTANTS, initialFormState } from '../../constants/logInForm.constants'
 import authService from '../../services/authService'
+import useRequest from '../../hooks/useRequest'
 import { useContext, useEffect } from 'react'
+import { useNavigate } from 'react-router'
 import { AuthContext } from '../../context/authContext'
 
 function LogInScreen() {
     const { form_title, form_subtitle, sections, button, footer } = LOG_IN_FORM_CONSTANTS
 
+    // Según el profe, todo esto debería ir en un hook separado (algo así como useLogIn) y este componente solo se encargaría de la UI
     const { sendRequest, response, error, loading } = useRequest()
-    const { manageLogin } = useContext(AuthContext)
+    const { manageLogin, isLogged } = useContext(AuthContext)
+    const navigate = useNavigate()
 
     const onLogIn = (formState) => {
         try {
@@ -25,6 +28,17 @@ function LogInScreen() {
         }
     }
 
+    // Si el usuario ya esta logueado, no lo dejo entrar al login
+    useEffect(
+        () => {
+            if (isLogged) {
+                navigate('/')
+            }
+        },
+        [isLogged]
+    )
+
+    // Hook para manejar la respuesta del servidor
     useEffect(
         () => {
             if (response && response.status === 200) {
