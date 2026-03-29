@@ -3,7 +3,7 @@ import ENVIRONMENT from "../config/environment.config";
 const API_URL = ENVIRONMENT.API_URL;
 
 const authService = {
-    login: async (email, password) => {
+    login: async ({email, password}) => {
         const response = await fetch(`${API_URL}/api/auth/login`, {
             method: 'POST',
             headers: {
