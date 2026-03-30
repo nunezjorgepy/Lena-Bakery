@@ -31,6 +31,8 @@ function LogInScreen() {
     }
 
     // Si el usuario ya esta logueado, no lo dejo entrar al login
+    // Probablemente esto sería mejor con un middleware
+    // TODO: si conviene el middleware, implementarlo
     useEffect(
         () => {
             if (isLogged) {

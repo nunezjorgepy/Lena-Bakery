@@ -7,11 +7,18 @@ import InformationFormComponent from '../../components/ui/InformationFormCompone
 // Constants
 import { REGISTER_FORM_CONSTANTS, initialFormState } from '../../constants/registerForm.constants'
 import ButtonComponent from '../../components/ui/ButtonComponent/ButtonComponent'
-import { Link } from 'react-router'
+import { Link, useNavigate } from 'react-router'
 import useRequest from '../../hooks/useRequest'
 import authService from '../../services/authService'
+import { useContext, useEffect } from 'react'
+import { AuthContext } from '../../context/authContext'
 
 function RegisterScreen() {
+  document.title = 'Lena Bakery - Registrarse'
+
+  const { isLogged } = useContext(AuthContext)
+  const navigate = useNavigate()
+
   const { 
     form_title, 
     form_subtitle, 
@@ -20,7 +27,6 @@ function RegisterScreen() {
     footer 
   } = REGISTER_FORM_CONSTANTS
   // Cambia el título de la página
-  document.title = 'Lena Bakery - Registrarse'
 
   const { sendRequest, response, error, loading } = useRequest()
 
@@ -35,6 +41,29 @@ function RegisterScreen() {
       console.log(error)
     }
   }
+
+  // Si el usuario ya esta logueado, no lo dejo entrar al login
+  // Probablemente esto sería mejor con un middleware
+  // TODO: si conviene el middleware, implementarlo
+  useEffect(
+      () => {
+          if (isLogged) {
+              navigate('/')
+          }
+      },
+      [isLogged]
+  )
+
+  // Hook para manejar la respuesta del servidor
+  useEffect(
+    () => {
+      if (response?.status === 201) {
+        alert('Usuario registrado exitosamente')
+        navigate('/login')
+      }
+    },
+    [response]
+  )
 
   return (
     <>
