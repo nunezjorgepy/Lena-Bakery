@@ -5,6 +5,9 @@ import HeaderComponent from "../../components/layout/HeaderComponent/HeaderCompo
 import FooterComponent from "../../components/layout/FooterComponent/FooterComponent"
 
 function HomePageScreen() {
+    // Cambia el título de la página
+    document.title = 'Lena\'s Bakery - Home'
+
     return (
         <>
             <HeaderComponent />
