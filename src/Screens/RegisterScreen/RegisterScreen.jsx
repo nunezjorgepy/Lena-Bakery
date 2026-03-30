@@ -19,6 +19,8 @@ function RegisterScreen() {
     button, 
     footer 
   } = REGISTER_FORM_CONSTANTS
+  // Cambia el título de la página
+  document.title = 'Lena Bakery - Registrarse'
 
   const { sendRequest, response, error, loading } = useRequest()
 

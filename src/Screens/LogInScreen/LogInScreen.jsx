@@ -10,6 +10,8 @@ import { AuthContext } from '../../context/authContext'
 
 function LogInScreen() {
     const { form_title, form_subtitle, sections, button, footer } = LOG_IN_FORM_CONSTANTS
+    // Cambia el título de la página
+    document.title = 'Lena Bakery - Iniciar Sesión'
 
     // Según el profe, todo esto debería ir en un hook separado (algo así como useLogIn) y este componente solo se encargaría de la UI
     const { sendRequest, response, error, loading } = useRequest()
